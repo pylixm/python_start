@@ -301,8 +301,8 @@ sys.getdefaultencoding()
 在 Python2中字符串类型有4种：`str`、`unicode`、`basestring`和`bytes`。
 
 - `basestring` 是一个基类（稍后会讲到此概念，可暂时理解为父亲或基础即可），`str`和`unicode`类型在此基础上构建。
-- `str` 是Python设计之初的字符串类型，默认使用系统编码。
-- `unicode`  是了使Python支持Unicode编码，在2.0版本之后添加的一种字符串类型。
+- `str` 是Python设计之初的字符串类型，实际上是一个字节串，默认使用系统编码。
+- `unicode`  是了使Python支持Unicode编码的字符串，在2.0版本之后添加的一种字符串类型。
 - `bytes` 是字节串，`str`本身便是一个字节串，那可认为`bytes`是`str`的一个别称，使用和`str`完全一致。
 
 看一实例：
@@ -445,7 +445,7 @@ print(a.decode('gbk'))
 - 使用 ASCII 作为默认编码方式，不能很好的支持非ASCII码字符；
 - 将字符串分为了`str` 和 `unicode`两种类型，让大家容易混淆；
 
-Python3 对以上问题做了很好的修正。Python3 默认编码改为了 `UTF-8`,对于非ASCII码支持更强大。其次，Python3 合并了`str` 和 `unicode` 类型，统一为 `str` 类型。使用 `bytes`类型来表示字节类型。这样很好的区分了字符串和字节串，`str`即为字符串，`bytes` 为字节串或叫二进制字节。
+Python3 对以上问题做了很好的修正。Python3 默认编码改为了 `UTF-8`,对于非ASCII码支持更强大。其次，Python3 将Python2的`unicode` 类型，改名为 `str` 类型，而Python2的`str`类型和`bytes`则合并统一使用使用 `bytes`类型来表示字节类型。这样很好的区分了字符串和字节串，`str`即为字符串，`bytes` 为字节串或叫二进制字节。
 
 看下面的例子：
 
