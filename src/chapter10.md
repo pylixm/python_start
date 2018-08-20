@@ -282,6 +282,7 @@ def say_hello(obj):
 我们使用到的三方包主要有以下2个，分别用来处理url地址请求和解析html返回结果的：
 - requests: 专门为人类提供的url处理库，官方地址：http://www.python-requests.org/en/master/
   基本简单使用如下：
+
 ```python
 >>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
 >>> r.status_code
@@ -297,6 +298,8 @@ u'{"type":"User"...'
 ```
 
 - BeautifulSoup: python爬虫中，长用的一个html解析包。官方地址：https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html
+
+
 ```python
 html_doc = """
 <html><head><title>The Dormouse's story</title></head>
