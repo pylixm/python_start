@@ -79,23 +79,37 @@ python setup.py sdist  # 打包
 执行完成后，会在顶层目录下生成dist目录和egg目录
 
 - 4、注册Pypi账号，注册地址：https://pypi.org/account/register/
+注册Pypitest账号，注册地址：https://test.pypi.org/
 账号和密码在包发布时会录入使用，为了在发布时不再手动录入用户名和密码我也可以使用配置文件`.pypirc`。
 
 ```ini
 [distutils]
 index-servers =
   pypi
+  pypitest
 
 [pypi]
-repository=https://pypi.python.org/pypi
-username=your_username
-password=your_password
+repository: https://upload.pypi.org/legacy/
+username: your_username
+password: your_password
+
+[pypitest]
+repository: https://test.pypi.org/legacy/
+username: your_username
+password: your_password
 ```
 
 
 ## 发布
 
 做好准备工作后，执行如下命令：
+
+```bash
+python setup.py check
+```
+检测`setup.py `是否正确，若有错误则会显示，没有则说明setup.py文件格式正确。
+
+运行如下命令，提交：
 
 ```bash
 python setup.py sdist upload -r pypi
