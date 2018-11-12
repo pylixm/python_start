@@ -125,6 +125,7 @@ if __name__=='__main__':
 - 方法第一个参数为`cls`。
 - 类方法，使用通过`类.方法名`来调用。
 
+
 #### 私有属性和方法
 
 在Python的类中，有些属性和方法只允许在的内部调用使用，使用双下划线开头，这些属性和方法叫做`类的私有变量`。定义如下：
@@ -253,6 +254,46 @@ def say_hello(obj):
 多态的好处，可以让我们定义多个类，而它们的调用不变。多态不但能改善程序的组织架构及可读性，更利于开发出“可扩充”的程序。这便是著名的“开闭”原则：
 - 对扩展开放（Open for extension）：允许子类重写方法函数
 - 对修改封闭（Closed for modification）：不重写，直接继承父类方法函数
+
+#### 抽象方法
+
+抽象方法，通常是定义在父类中的一种方法。它没有实现，只提供了方法名，并且该基类的元类是ABCMeta或从中派生出来类，该父类不能实例化，只能让子类继承。继承该父类的子类，必须实现该该方法，否则会报错。
+
+实例：
+
+```python
+import abc
+
+# 第一种 
+class A(object):
+    __metaclass__ = abc.ABCMeta
+
+    @abc.abstractmethod
+    def abtest(self):
+        pass
+
+# 第二种
+# class A(object):
+#     def abtest(self):
+#         raise NotImplementedError
+
+class B(A):
+
+    def abtest(self):
+        print('------')
+
+
+if __name__=='__main__':
+    # 实例化会抛出 TypeError: Can't instantiate abstract class A with abstract methods abtest
+    # a = A()
+    # a.abtest()
+
+    b = B()
+    b.abtest()
+```
+
+注意：
+- 两种抽象方法各有优劣，第一种，比较复杂格式要求严格，若没有实现该方法，在运行时才能知道其错误。第二种，写法简单，当没有实现该方法时，在实例化时就知道了。
 
 
 ## 编程范式
