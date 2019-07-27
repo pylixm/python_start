@@ -118,6 +118,14 @@ python setup.py sdist upload -r pypi
 
 之后，我们可以使用pip安装我们的包来做测试，也可登录`pypi.org`来查看我们上传的包。
 
+Pypi 更新后，推荐使用 twnine 工具，如下发布:
+
+```bash 
+python setup.py sdist  # 打包
+
+twine upload dist/*  # 发布
+```
+
 ## 参考
 
 - [Distributing Python Modules](https://docs.python.org/3/distutils/index.html)
