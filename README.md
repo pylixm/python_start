@@ -17,7 +17,7 @@ GitHub地址: https://github.com/pylixm/python_start/issues
 
 欢迎关注个人公众号，个人原创文章会首发公众号：
 
-<img src='https://ws1.sinaimg.cn/large/8697aaedly1ftwc7m5wfej20kq0kwtby.jpg' width='200' height='200' />
+<img src='images/qrcode.jpg' width='200' height='200' />
 
 
 
