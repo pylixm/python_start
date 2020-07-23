@@ -1,9 +1,9 @@
 <!-- TOC -->
 
 - [TCP/IP](#tcpip)
-    - [Socket](#socket)
-    - [socket()函数](#socket函数)
-    - [简单实例](#简单实例)
+  - [Socket](#socket)
+  - [socket()函数](#socket函数)
+  - [简单实例](#简单实例)
 
 <!-- /TOC -->
 ## TCP/IP
