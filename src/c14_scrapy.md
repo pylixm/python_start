@@ -1,16 +1,19 @@
+# 第十四章 Scrapy框架介绍
+
 
 <!-- TOC -->
 
-- [Scrapy 简介](#scrapy-简介)
+- [第十四章 Scrapy框架介绍](#第十四章-scrapy框架介绍)
+  - [Scrapy 简介](#scrapy-简介)
     - [安装](#安装)
     - [架构介绍](#架构介绍)
-- [Scrapy 基本使用](#scrapy-基本使用)
+  - [Scrapy 基本使用](#scrapy-基本使用)
     - [第一步，创建项目](#第一步创建项目)
     - [第二步，编写Spider](#第二步编写spider)
     - [第三步，定义item](#第三步定义item)
     - [第四步，构建 Item pipeline 持久化到文件](#第四步构建-item-pipeline-持久化到文件)
     - [第五步，使用Item pipeline 持久化到数据库](#第五步使用item-pipeline-持久化到数据库)
-- [参考](#参考)
+  - [参考](#参考)
 
 <!-- /TOC -->
 
@@ -46,7 +49,7 @@ conda install -c conda-forge scrapy
 
 Scrapy 架构如下图：
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1fue5k6ydd5j212w0q4myc.jpg)
+![](/images/scrapy_architecture.png)
 
 Scrapy中的数据流由执行引擎控制，其过程如下:
 
@@ -85,7 +88,7 @@ Spider中间件是在引擎及Spider之间的特定钩子(specific hook)，处�
 
 各组件功能简单可总结如下，大多数情况下我们只需要定义其中的`Spider`和`ItemPipline`模块即可需求。
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1fue5c9sky2j20vg0k846q.jpg)
+![](/images/scrapy_module.png)
 
 
 ## Scrapy 基本使用
@@ -101,7 +104,19 @@ scrapy startproject v6_scrapy
 ```
 会生成如下代码：
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1fue63ipdyzj20c40awjsc.jpg)
+```bash
+$ tree
+.
+├── scrapy.cfg
+└── v6_scrapy
+    ├── __init__.py
+    ├── items.py
+    ├── middlewares.py
+    ├── pipelines.py
+    ├── settings.py
+    └── spiders
+        └── __init__.py
+```
 
 ```
 scrapy.cfg 项目部署文件

@@ -1,28 +1,30 @@
+# 第二章 环境搭建
+
 <!-- TOC -->
 
-- [计算机编程基础知识](#计算机编程基础知识)
+- [第二章 环境搭建](#第二章-环境搭建)
+  - [计算机编程基础知识](#计算机编程基础知识)
     - [编程入门准备知识](#编程入门准备知识)
-        - [计算机基本组成](#计算机基本组成)
-        - [计算机中的编码](#计算机中的编码)
-        - [一门语言的基本组成](#一门语言的基本组成)
-- [环境搭建](#环境搭建)
+      - [计算机基本组成](#计算机基本组成)
+      - [计算机中的编码](#计算机中的编码)
+      - [一门语言的基本组成](#一门语言的基本组成)
+  - [环境搭建](#环境搭建)
     - [Python下载和安装(window/mac/linux)](#python下载和安装windowmaclinux)
-        - [windows 系统安装](#windows-系统安装)
-        - [Mac 系统安装](#mac-系统安装)
-        - [Linux 系统安装](#linux-系统安装)
+      - [windows 系统安装](#windows-系统安装)
+      - [Mac 系统安装](#mac-系统安装)
+      - [Linux 系统安装](#linux-系统安装)
     - [交互式环境](#交互式环境)
-        - [终端shell](#终端shell)
-        - [IDLE](#idle)
-        - [ipython](#ipython)
+      - [终端shell](#终端shell)
+      - [IDLE](#idle)
+      - [ipython](#ipython)
     - [集成式开发环境选择](#集成式开发环境选择)
-        - [Sublime](#sublime)
-        - [VSCode](#vscode)
-        - [PyCharm](#pycharm)
-- [总结](#总结)
-- [参考](#参考)
+      - [Sublime](#sublime)
+      - [VSCode](#vscode)
+      - [PyCharm](#pycharm)
+  - [总结](#总结)
+  - [参考](#参考)
 
 <!-- /TOC -->
-[< 返回索引页](https://segmentfault.com/a/1190000015378402)
 
 ## 计算机编程基础知识
 
@@ -32,7 +34,7 @@
 
 个人PC计算机系统组成分`硬件`和`软件`量大部分。硬件系统主要由中央处理器、存储器、输入输出控制系统和各种外部设备组成。软件分为系统软件和应用软件。
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1frzheixkmwj20jg0h1ab2.jpg)
+![](/images/computer.jpeg)
 
 图片来源：百度百科
 
@@ -40,7 +42,8 @@
 
 #### 计算机中的编码
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1frzhvtuhh0j20g409v0u1.jpg)
+![](/images/eniac.jpeg)
+
 第一代电子计算机 - ENIAC
 
 计算机是不能识别人类语言的，那么她们是如何处理任务的呢？计算机归根结底是一种电路设备，她们底层处理都是通过电路的开关来识别。根据这一点，人们就通过将任务指令转化为用0和1的二进制串来标识，从而让计算机系统可以识别。这种直接有二进制代码组成的程序语言叫`机器语言`。后来人们在二级制的机器语言上发明了`汇编语言`，只用指令集来对应不同的机器指令，通过汇编过程转换成机器指令来执行。再后来到20世纪中期，一大批高级语言诞生，包括后来应用广泛的C、VB等语言。
@@ -75,7 +78,7 @@ Unicode 编码表示同一个字符时，比ASCII码的占用空间大的多，�
 
 计算机编码基本分类如下：
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1frzj7qhgo5j20ye0q27c9.jpg)
+![](/images/byte_code.png)
 
 图片来源：[regexlab](http://www.regexlab.com/zh/encoding.htm)
 
@@ -116,7 +119,8 @@ window系统可直接从[官网下载地址](https://www.python.org/downloads/wi
 安装时需要注意一下几点：
 
 - 1、选择适合自己操作系统的安装包。
-![](./images/choice.png)
+  
+![](/images/choice.png)
 
 - 2、安装时勾选“Add Python 3.6 to PATH”，会将python的安装目录和命令目录一并加到系统环境变量中，这样我们在CMD窗口中才可以使用 `python` 命令。
 - 3、点击自定义安装，将python的常用工具包（pip包等）安装上。
@@ -124,7 +128,7 @@ window系统可直接从[官网下载地址](https://www.python.org/downloads/wi
 
 安装完毕后，打开系统CMD窗口，输入python命令，见到如下信息便说明成功。
 
-![](./images/success.png)
+![](/images/success.png)
 
 #### Mac 系统安装
 

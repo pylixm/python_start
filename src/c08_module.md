@@ -1,22 +1,25 @@
+# 第八章 模块
+
 
 <!-- TOC -->
 
-- [模块](#模块)
+- [第八章 模块](#第八章-模块)
+  - [模块](#模块)
     - [模块](#模块-1)
     - [包](#包)
-- [模块和包的使用](#模块和包的使用)
+  - [模块和包的使用](#模块和包的使用)
     - [相对导入](#相对导入)
     - [绝对导入](#绝对导入)
     - [导入中涉及到的变量](#导入中涉及到的变量)
-        - [__name__](#__name__)
-        - [dir()](#dir)
-        - [__all__](#__all__)
+      - [__name__](#name)
+      - [dir()](#dir)
+      - [__all__](#all)
     - [常出现的问题](#常出现的问题)
-        - [循环导入](#循环导入)
-        - [覆盖导入](#覆盖导入)
-- [内建模块](#内建模块)
-- [第三方模块](#第三方模块)
-- [参考](#参考)
+      - [循环导入](#循环导入)
+      - [覆盖导入](#覆盖导入)
+  - [内建模块](#内建模块)
+  - [第三方模块](#第三方模块)
+  - [参考](#参考)
 
 <!-- /TOC -->
 
@@ -88,9 +91,14 @@ print(demo01.utils.add(3, 4))
 - 为进一步防止模块变量的重名，导入模块时，可使用`as` 关键字来给模块起别名，如：`from utils import add as utils_add`。
 - `import demo01.utils` 只可导入到模块级别。 
 - Python导入时，会根据`sys.path`中的目录路径来搜索导入的包。会先默认从本目录导入，在向外其他python系统变量中的路径搜索。可在python shell中查看，如下：
-  ![](https://ws1.sinaimg.cn/large/8697aaedly1ft2jnnqcerj224s09aacx.jpg)
+  
+```python
+>>> import sys
+>>> sys.path
+['', '/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python27.zip', '/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python2.7', '/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin', '/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac', '/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages', '/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk', '/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old', '/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload', '/Users/xiumin1/Library/Python/2.7/lib/python/site-packages', '/usr/local/lib/python2.7/site-packages']
+```
 
-其中，引号表示当前目录，非模块文件所在目录。为若都没有找到要导入的包，会抛出`ImportError`错误，可通过`sys.path.append('/home/python/')`将模块路径追加到`sys.path`来添加导入的搜索路径。
+其中，引号表示当前目录，非模块文件所在目录。若都没有找到要导入的包，会抛出`ImportError`错误，可通过`sys.path.append('/home/python/')`将模块路径追加到`sys.path`来添加导入的搜索路径。
 
 ### 相对导入
 

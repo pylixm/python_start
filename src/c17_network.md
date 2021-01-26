@@ -1,9 +1,12 @@
+# 第十七章 网络编程
+
 <!-- TOC -->
 
-- [TCP/IP](#tcpip)
-  - [Socket](#socket)
-  - [socket()函数](#socket函数)
-  - [简单实例](#简单实例)
+- [第十七章 网络编程](#第十七章-网络编程)
+  - [TCP/IP](#tcpip)
+    - [Socket](#socket)
+    - [socket()函数](#socket函数)
+    - [简单实例](#简单实例)
 
 <!-- /TOC -->
 ## TCP/IP
@@ -108,9 +111,3 @@ s.connect((host, port))
 print s.recv(1024)
 s.close()  
 ```
-
-Python中的网络编程除了socket模块外还有如下模块：
-
-![](https://ws1.sinaimg.cn/large/8697aaedly1fuog9rvsjrj21a80jkq5e.jpg)
-
-这里只做罗列，具体的模块还请参阅具体模块的说明文档。

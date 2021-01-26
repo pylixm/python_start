@@ -1,17 +1,21 @@
+# 第一章 Python介绍
+
 <!-- TOC -->
 
-- [Python语言简介](#python语言简介)
+- [第一章 Python介绍](#第一章-python介绍)
+  - [Python语言简介](#python语言简介)
     - [Python介绍及发展](#python介绍及发展)
-        - [介绍](#介绍)
-        - [历史](#历史)
-        - [Python2 vs Python3](#python2-vs-python3)
+      - [介绍](#介绍)
+      - [历史](#历史)
+      - [Python2 vs Python3](#python2-vs-python3)
     - [Python的优劣及应用领域](#python的优劣及应用领域)
-        - [应用领域](#应用领域)
+      - [应用领域](#应用领域)
     - [与其他语言比较](#与其他语言比较)
     - [如何学习Python](#如何学习python)
-- [参考](#参考)
+  - [参考](#参考)
 
 <!-- /TOC -->
+
 
 ## Python语言简介
 
@@ -43,7 +47,7 @@ Python 官方网站：https://www.python.org/， 大家可以到此处下载 Pyt
 
 #### 历史
 
-![](https://ws1.sinaimg.cn/large/8697aaedly1frvs8rhblhj208b07tq7g.jpg)
+![](/images/base_guido.jpg)
 
 Python的作者，吉多·范罗苏姆(Guido von Rossum)，荷兰人，业内人称龟叔。
 
@@ -66,6 +70,7 @@ Guido 当时在荷兰的 CWI（Centrum Wiskunde & Informatica) 研究所工作�
 - `Python2.7` 2010年7月发布。同年，python中流行的`Flask`框架发布，一经发布便以它简单、自定义的特性迅速蹿红。现在已与Django 并驾齐驱成为python界最受欢迎的2大web框架。
 
 - 2014年4月 Guido [宣布](https://hg.python.org/peps/rev/76d43e52d978)Python 2.7支持时间延长到2020年。且不会再有2.8了。
+  
 >[pep0373](https://www.python.org/dev/peps/pep-0373/)描述：
 >Being the last of the 2.x series, 2.7 will have an extended period of maintenance. Specifically, 2.7 will receive bugfix support until January 1, 2020. All 2.7 development work will cease in 2020.
 >There will be no Python 2.8 (see [PEP 404](https://www.python.org/dev/peps/pep-0404)).
