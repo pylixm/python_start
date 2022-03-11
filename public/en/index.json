@@ -1,0 +1,29 @@
+[
+{
+	"uri": "/en/basics/",
+	"title": "Basics",
+	"tags": [],
+	"description": "",
+	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "/en/",
+	"title": "Documentation for Hugo Learn Theme",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/en/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/en/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
