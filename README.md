@@ -4,7 +4,7 @@
 
 本教程有[Pylixm](https://github.com/pylixm)整理，若有疑问，大家可在下方留言，或到github提issue。
 
-在线阅读地址：http://www.pylixm.cc/python_start
+在线阅读地址：http://www.pylixm.top/python_start
 
 GitHub地址: https://github.com/pylixm/python_start/issues
 
